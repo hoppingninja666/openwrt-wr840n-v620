@@ -383,6 +383,7 @@ define Device/tplink_tl-wr840n-v620
   KERNEL_INITRAMFS := $(KERNEL_DTB) | tplink-v2-header -e
   IMAGE/sysupgrade.bin := tplink-v2-image -s -e | append-metadata | \
 	check-size $$$$(IMAGE_SIZE)
+  IMAGE/tftp-recovery.bin := pad-extra 64k | $$(IMAGE/factory.bin)
   SUPPORTED_DEVICES += tl-wr840n-v620
 endef
 TARGET_DEVICES += tplink_tl-wr840n-v620
