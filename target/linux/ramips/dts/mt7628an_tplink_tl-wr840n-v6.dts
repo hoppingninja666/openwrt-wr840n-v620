@@ -6,14 +6,19 @@
 #include <dt-bindings/input/input.h>
 
 / {
-	compatible = "tplink,tl-wr840n-v620", "mediatek,mt7628an-soc";
-	model = "TP-Link TL-WR840N v6.20";
+	compatible = "tplink,tl-wr840n-v6", "mediatek,mt7628an-soc";
+	model = "TP-Link TL-WR840N v6";
 
 	aliases {
 		led-boot = &led_power_green;
 		led-failsafe = &led_power_green;
 		led-running = &led_power_green;
 		led-upgrade = &led_power_green;
+	};
+	
+	memory@0 {
+		device_type = "memory";
+		reg = <0x0 0x2000000>;
 	};
 
 	chosen {
@@ -35,12 +40,12 @@
 		compatible = "gpio-leds";
 
 		led_power_green: power {
-			label = "tl-wr840n-v620:green:power";
+			label = "tl-wr840n-v6:green:power";
 			gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
 		};
 
 		orange {
-			label = "tl-wr840n-v620:orange:power";
+			label = "tl-wr840n-v6:orange:power";
 			gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
 		};
 	};
@@ -78,14 +83,6 @@
 			};
 		};
 	};
-};
-
-&ehci {
-	status = "disabled";
-};
-
-&ohci {
-	status = "disabled";
 };
 
 &wmac {
