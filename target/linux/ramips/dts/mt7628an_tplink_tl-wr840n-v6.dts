@@ -10,10 +10,10 @@
 	model = "TP-Link TL-WR840N v6";
 
 	aliases {
-		led-boot = &led_power_green;
-		led-failsafe = &led_power_green;
-		led-running = &led_power_green;
-		led-upgrade = &led_power_green;
+		led-boot = &led_power;
+		led-failsafe = &led_power;
+		led-running = &led_power;
+		led-upgrade = &led_power;
 	};
 	
 	memory@0 {
@@ -39,14 +39,24 @@
 	leds {
 		compatible = "gpio-leds";
 
-		led_power_green: power {
-			label = "tl-wr840n-v6:green:power";
-			gpios = <&gpio1 9 GPIO_ACTIVE_LOW>;
+		lan {
+			label = "tl-wr840n-v6:green:lan";
+			gpios = <&gpio1 7 GPIO_ACTIVE_LOW>;
 		};
 
-		orange {
-			label = "tl-wr840n-v6:orange:power";
-			gpios = <&gpio1 11 GPIO_ACTIVE_LOW>;
+		wlan {
+			label = "tl-wr840n-v6:green:wlan";
+			gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+		};
+
+		led_power: orange {
+			label = "tl-wr840n-v6:orange:wan";
+			gpios = <&gpio1 10 GPIO_ACTIVE_HIGH>;
+		};
+
+		green {
+			label = "tl-wr840n-v6:green:wan";
+			gpios = <&gpio1 8 GPIO_ACTIVE_LOW>;
 		};
 	};
 };
@@ -99,7 +109,7 @@
 &pinctrl {
 	state_default: pinctrl0 {
 		gpio {
-			ralink,group = "p0led_an", "p2led_an", "perst";
+			ralink,group = "p1led_an", "p3led_an", "p4led_an", "wled_an", "perst";
 			ralink,function = "gpio";
 		};
 	};
