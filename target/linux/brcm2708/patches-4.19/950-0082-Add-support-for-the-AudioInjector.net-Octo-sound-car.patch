@@ -1,7 +1,7 @@
-From e95def09872db37a8e577da0882a113f68476af4 Mon Sep 17 00:00:00 2001
+From b23a1e68fb74d39ac2423b8446248a7b8a7a5931 Mon Sep 17 00:00:00 2001
 From: Matt Flax <flatmax@flatmax.org>
 Date: Wed, 8 Mar 2017 20:04:13 +1100
-Subject: [PATCH 082/703] Add support for the AudioInjector.net Octo sound card
+Subject: [PATCH 082/782] Add support for the AudioInjector.net Octo sound card
 
 AudioInjector Octo: sample rates, regulators, reset
 

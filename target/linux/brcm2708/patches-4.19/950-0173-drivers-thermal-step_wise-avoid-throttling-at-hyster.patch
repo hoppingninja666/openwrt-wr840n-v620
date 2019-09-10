@@ -1,7 +1,7 @@
-From 71eb84af0905c95ae67e957f8af81e131e534ea9 Mon Sep 17 00:00:00 2001
+From f9c073f4eade01d5b355f81ccc3b8b9fe9ee1956 Mon Sep 17 00:00:00 2001
 From: Serge Schneider <serge@raspberrypi.org>
 Date: Tue, 2 Oct 2018 11:14:15 +0100
-Subject: [PATCH 173/703] drivers: thermal: step_wise: avoid throttling at
+Subject: [PATCH 173/782] drivers: thermal: step_wise: avoid throttling at
  hysteresis temperature after dropping below it
 
 Signed-off-by: Serge Schneider <serge@raspberrypi.org>

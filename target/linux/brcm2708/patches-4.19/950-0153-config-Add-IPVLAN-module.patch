@@ -1,7 +1,7 @@
-From 0de1fec9e76eabe6079fb9984a012cbdee9164a6 Mon Sep 17 00:00:00 2001
+From f2089ee42459e50a2fb1d6625034930997926c42 Mon Sep 17 00:00:00 2001
 From: popcornmix <popcornmix@gmail.com>
 Date: Thu, 29 Mar 2018 16:05:28 +0100
-Subject: [PATCH 153/703] config: Add IPVLAN module
+Subject: [PATCH 153/782] config: Add IPVLAN module
 
 ---
  arch/arm/configs/bcm2709_defconfig | 1 +

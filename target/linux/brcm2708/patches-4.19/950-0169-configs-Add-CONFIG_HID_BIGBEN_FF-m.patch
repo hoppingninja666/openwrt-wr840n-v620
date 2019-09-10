@@ -1,7 +1,7 @@
-From 8bf8320c86fd8601dccb0ea6dc677a6d2256a50e Mon Sep 17 00:00:00 2001
+From ec3bcd88667a3236841cbfa26507c70af4c8d860 Mon Sep 17 00:00:00 2001
 From: Phil Elwell <phil@raspberrypi.org>
 Date: Mon, 24 Sep 2018 14:56:58 +0100
-Subject: [PATCH 169/703] configs: Add CONFIG_HID_BIGBEN_FF=m
+Subject: [PATCH 169/782] configs: Add CONFIG_HID_BIGBEN_FF=m
 
 See: https://github.com/raspberrypi/linux/issues/2690
 
